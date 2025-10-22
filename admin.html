@@ -1,0 +1,18 @@
+<!-- templates/admin.html -->
+{% extends "base.html" %}
+{% block content %}
+    <h1>管理员后台 - 待审核稿件</h1>
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <div class="post-meta">作者: {{ post.author.username }} | 提交于: {{ post.date_posted.strftime('%Y-%m-%d %H:%M') }}</div>
+            <p>{{ post.content }}</p>
+            <div>
+                <a href="{{ url_for('approve_post', post_id=post.id) }}" style="color: green;">批准</a> |
+                <a href="{{ url_for('reject_post', post_id=post.id) }}" style="color: red;">拒绝</a>
+            </div>
+        </div>
+    {% else %}
+        <p>没有待审核的稿件。</p>
+    {% endfor %}
+{% endblock %}
