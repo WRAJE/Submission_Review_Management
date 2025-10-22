@@ -1,0 +1,15 @@
+/* static/style.css */
+body { font-family: sans-serif; margin: 2em; background-color: #f4f4f9; }
+.container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+nav { background: #333; color: white; padding: 1em; border-radius: 8px 8px 0 0; }
+nav a { color: white; text-decoration: none; margin-right: 15px; }
+nav a:hover { text-decoration: underline; }
+.flash { padding: 1em; margin-bottom: 1em; border: 1px solid transparent; border-radius: 4px; }
+.flash.success { color: #155724; background-color: #d4edda; border-color: #c3e6cb; }
+.flash.error { color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; }
+.post { border-bottom: 1px solid #eee; padding-bottom: 1em; margin-bottom: 1em; }
+.post h2 { margin-top: 0; }
+.post-meta { font-size: 0.8em; color: #666; }
+.status-pending { color: #ffc107; }
+.status-approved { color: #28a745; }
+.status-rejected { color: #dc3545; }
